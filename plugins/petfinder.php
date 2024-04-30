@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Petfindr API Plugin
+ * Plugin Name: Pet Finder API Plugin
  * Description: Integrates with a pet finding API to display missing pets on your WordPress site.
  * Version: 1.0.0
  * Author: Marko Miletic
