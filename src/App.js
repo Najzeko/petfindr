@@ -50,7 +50,7 @@ const App = () => {
   };
 
   return (
-    <div className="container">
+    <div>
       <header>
         <h1>PetFindr</h1>
         <p className="subheading">
@@ -59,34 +59,36 @@ const App = () => {
           We hope you are able to find your lost pet :)
         </p>
       </header>
-      <div>
-        <TextInput value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
-        <div className="filters">
-          <Filter
-            label="Animals"
-            options={animalOptions}
-            value={selectedAnimal}
-            onChange={handleAnimalChange}
-          />
-          <Filter
-            label="Colors"
-            options={colorOptions}
-            value={selectedColor}
-            onChange={handleColorChange}
-          />
-        </div>
-        <div className="animal-counts">
-          {Object.entries(animalCounts).map(([animal, count]) => (
-            <span key={animal}>{`${animal}: ${count} `}</span>
-          ))}
-        </div>
-        <div className="pet-list">
-          {filteredPets.length === 0 && (
-            <div className="no-results">No results found!</div>
-          )}
-          {filteredPets.map(pet => (
-            <PetEntry key={pet.name} pet={pet} />
-          ))}
+      <div className="container">
+        <div>
+          <TextInput value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+          <div className="filters">
+            <Filter
+              label="Animals"
+              options={animalOptions}
+              value={selectedAnimal}
+              onChange={handleAnimalChange}
+            />
+            <Filter
+              label="Colors"
+              options={colorOptions}
+              value={selectedColor}
+              onChange={handleColorChange}
+            />
+          </div>
+          <div className="animal-counts">
+            {Object.entries(animalCounts).map(([animal, count]) => (
+              <span key={animal}>{`${animal}: ${count} `}</span>
+            ))}
+          </div>
+          <div className="pet-list">
+            {filteredPets.length === 0 && (
+              <div className="no-results">No results found!</div>
+            )}
+            {filteredPets.map(pet => (
+              <PetEntry key={pet.name} pet={pet} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
