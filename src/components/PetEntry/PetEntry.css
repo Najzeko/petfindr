@@ -1,13 +1,25 @@
-li {
-  margin-bottom: 15px;
+.pet-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Define the grid columns */
+  gap: 20px; /* Add gap between grid items */
+}
+
+.pet-entry {
+  position: relative; /* Set position relative for absolute positioning of content */
+  width: 100%; /* Ensure each grid item takes the full width of its container */
+  padding-top: 100%; /* Set padding top to create a square (1:1 aspect ratio) */
   background-color: #fff;
-  padding: 15px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: calc(2/3 * 1200px);
-  max-width: calc(2/3 * 1200px);
-  margin-left: 5%;
-  padding-left: 50px;
+}
+
+.pet-entry .content {
+  position: absolute; /* Position content within the square */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px; /* Add padding for content inside the square */
 }
 
 .pet-name {

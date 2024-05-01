@@ -80,14 +80,14 @@ const App = () => {
             <span key={animal}>{`${animal}: ${count} `}</span>
           ))}
         </div>
-        <ul>
+        <div className="pet-list">
           {filteredPets.length === 0 && (
             <div className="no-results">No results found!</div>
           )}
           {filteredPets.map(pet => (
             <PetEntry key={pet.name} pet={pet} />
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
