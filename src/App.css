@@ -23,16 +23,17 @@ ul {
 }
 
 .animal-counts {
+  display: flex;
+  background-color: #3498db; /* Light background color */
+  color: #fff;
+  padding: 10px; /* Add padding around the bar */
+  border-radius: 5px; /* Rounded corners */
   margin-bottom: 20px;
 }
 
 .animal-counts span {
-  display: inline-block;
-  margin-right: 10px;
-  background-color: #2980b9;
   color: #fff;
   padding: 5px 10px;
-  border-radius: 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -44,8 +45,21 @@ ul {
     font-size: 12px;
     padding-top: 10%;
   }
+
+  .animal-counts {
+    display: initial;
+    background-color: transparent;
+    margin-bottom: 20px;
+    padding: 0;
+  }
   
   .animal-counts span {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
     margin-right: 5px; /* Reduce margin between counts */
     margin-bottom: 5px; /* Add space between counts */
   }
