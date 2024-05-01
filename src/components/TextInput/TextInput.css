@@ -7,3 +7,9 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 768px) {
+    input[type="text"] {
+        width: 80%;
+      }
+  }

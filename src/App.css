@@ -34,3 +34,19 @@ ul {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-size: 12px;
+    padding-top: 10%;
+  }
+  
+  .animal-counts span {
+    margin-right: 5px; /* Reduce margin between counts */
+    margin-bottom: 5px; /* Add space between counts */
+  }
+}
