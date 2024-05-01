@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
 
-function App() {
+const App = () => {
+  const [pets, setPets] = useState([]);
+
+  useEffect(() => {
+    fetch('http://petfindr.local/wp-json/petfinder/v1/pets')
+      .then(response => response.json())
+      .then(data => setPets(data));
+  }, []);
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ul>
+        {pets.map(pet => (
+          <li key={pet.name}>
+            <strong>{pet.name}</strong> - {pet.animal}, {pet.color}
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
 
 export default App;
