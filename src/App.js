@@ -53,6 +53,11 @@ const App = () => {
     <div className="container">
       <header>
         <h1>PetFindr</h1>
+        <p className="subheading">
+          Welcome to PetFindr, where good samaritans post notices for found pets.
+          Lost a pet? Enter your pet's name in the search bar, or use any variety of filters to see if they've been found!
+          We hope you are able to find your lost pet :)
+        </p>
       </header>
       <div>
         <TextInput value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />

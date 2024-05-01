@@ -4,6 +4,16 @@ header {
   padding: 10px 0;
   text-align: center;
   border-radius: 10px;
+  font-size: 50px;
+}
+
+.subheading {
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: -50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
 }
 
 ul {
