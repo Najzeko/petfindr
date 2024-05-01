@@ -24,10 +24,10 @@ ul {
 
 .animal-counts {
   display: flex;
-  background-color: #3498db; /* Light background color */
+  background-color: #3498db;
   color: #fff;
-  padding: 10px; /* Add padding around the bar */
-  border-radius: 5px; /* Rounded corners */
+  padding: 10px;
+  border-radius: 5px;
   margin-bottom: 20px;
 }
 
@@ -36,7 +36,7 @@ ul {
   padding: 5px 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 728px) {
   header {
     font-size: 24px;
   }
@@ -60,7 +60,7 @@ ul {
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
-    margin-right: 5px; /* Reduce margin between counts */
-    margin-bottom: 5px; /* Add space between counts */
+    margin-right: 5px;
+    margin-bottom: 5px;
   }
 }
