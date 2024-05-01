@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TextInput from './components/TextInput';
+import Filter from './components/Filter';
 import './App.css';
 
 const App = () => {
@@ -54,22 +55,18 @@ const App = () => {
       <div>
         <TextInput value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
         <div className="filters">
-          <select value={selectedAnimal} onChange={handleAnimalChange}>
-            <option value="All Animals">All Animals</option>
-            {animalOptions.map(animal => (
-              <option key={animal} value={animal}>
-                {animal}
-              </option>
-            ))}
-          </select>
-          <select value={selectedColor} onChange={handleColorChange}>
-            <option value="All Colors">All Colors</option>
-            {colorOptions.map(color => (
-              <option key={color} value={color}>
-                {color}
-              </option>
-            ))}
-          </select>
+          <Filter
+            label="Animals"
+            options={animalOptions}
+            value={selectedAnimal}
+            onChange={handleAnimalChange}
+          />
+          <Filter
+            label="Colors"
+            options={colorOptions}
+            value={selectedColor}
+            onChange={handleColorChange}
+          />
         </div>
         <div className="animal-counts">
           {Object.entries(animalCounts).map(([animal, count]) => (
