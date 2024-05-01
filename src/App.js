@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import TextInput from './components/TextInput';
 import './App.css';
 
 const App = () => {
@@ -51,13 +52,7 @@ const App = () => {
         <h1>PetFindr</h1>
       </header>
       <div>
-        <input
-          type="text"
-          placeholder="Search by name..."
-          value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
-          className="search-input"
-        />
+        <TextInput value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
         <div className="filters">
           <select value={selectedAnimal} onChange={handleAnimalChange}>
             <option value="All Animals">All Animals</option>
