@@ -19,14 +19,30 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 15px; /* Add padding for content inside the square */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Column layout for child elements */
+}
+
+.pet-image {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.pet-image img {
+  width: 100%; /* Set image width */
+  height: 200px; /* Set image height */
+  object-fit: cover; /* Ensure the image covers the container */
 }
 
 .pet-name {
-  margin-bottom: 10px;
-  font-size: 18px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 28px;
 }
 
 .pet-info {
-  margin-bottom: 5px;
+  padding: 20px;
+  margin-top: auto; /* Push pet info to the bottom of the content */
 }
