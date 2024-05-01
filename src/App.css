@@ -23,13 +23,3 @@ ul {
   padding: 5px 10px;
   border-radius: 5px;
 }
-
-@media only screen and (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-  .filters select {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
