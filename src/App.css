@@ -9,7 +9,8 @@ header {
 input[type="text"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -34,8 +35,8 @@ li {
 }
 
 .pet-name {
-  margin-bottom: 10px; /* Add space below the name */
-  font-size: 18px; /* Increase font size of the name */
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .pet-info {
@@ -58,5 +59,30 @@ li {
 @media only screen and (max-width: 768px) {
   .container {
     padding: 10px;
+  }
+}
+
+.filters {
+  margin-bottom: 10px;
+}
+
+.filters select {
+  width: 150px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+@media only screen and (max-width: 768px) {
+  .filters select {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
