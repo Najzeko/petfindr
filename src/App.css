@@ -33,6 +33,28 @@ li {
   padding-left: 50px;
 }
 
+.pet-name {
+  margin-bottom: 10px; /* Add space below the name */
+  font-size: 18px; /* Increase font size of the name */
+}
+
+.pet-info {
+  margin-bottom: 5px;
+}
+
+.animal-counts {
+  margin-bottom: 20px;
+}
+
+.animal-counts span {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #2980b9;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     padding: 10px;

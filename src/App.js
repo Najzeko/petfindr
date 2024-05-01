@@ -40,17 +40,25 @@ const App = () => {
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
       />
-      <div>
+      <div className="animal-counts">
         {Object.entries(animalCounts).map(([animal, count]) => (
           <span key={animal}>{`${animal}: ${count} `}</span>
         ))}
       </div>
       <ul>
-        {filteredPets.map(pet => (
-          <li key={pet.name}>
-            <strong>{pet.name}</strong> - {pet.animal}, {pet.color}
-          </li>
-        ))}
+      {filteredPets.map(pet => (
+            <li key={pet.name}>
+              <div className="pet-name">
+                <strong>{pet.name}</strong>
+              </div>
+              <div className="pet-info">
+                Animal: {pet.animal}
+              </div>
+              <div className="pet-info">
+                Color: {pet.color}
+              </div>
+            </li>
+          ))}
       </ul>
     </div>
   );
