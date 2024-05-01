@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import TextInput from './components/TextInput';
 import Filter from './components/Filter';
-import PetItem from './components/PetItem';
+import PetEntry from './components/PetEntry';
 import './App.css';
+
 
 const App = () => {
   const [pets, setPets] = useState([]);
@@ -79,7 +80,7 @@ const App = () => {
             <div className="no-results">No results found!</div>
           )}
           {filteredPets.map(pet => (
-            <PetItem key={pet.name} pet={pet} />
+            <PetEntry key={pet.name} pet={pet} />
           ))}
         </ul>
       </div>
