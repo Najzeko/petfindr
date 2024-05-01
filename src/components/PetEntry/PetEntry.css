@@ -1,0 +1,21 @@
+li {
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(2/3 * 1200px);
+  max-width: calc(2/3 * 1200px);
+  margin-right:auto;
+  margin-left:auto;
+  padding-left: 50px;
+}
+
+.pet-name {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.pet-info {
+  margin-bottom: 5px;
+}

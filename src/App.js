@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import TextInput from './components/TextInput';
-import Filter from './components/Filter';
-import PetEntry from './components/PetEntry';
+import TextInput from './components/TextInput/TextInput';
+import Filter from './components/Filter/Filter';
+import PetEntry from './components/PetEntry/PetEntry';
 import './App.css';
 
 

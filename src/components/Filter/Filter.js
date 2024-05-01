@@ -1,4 +1,5 @@
 import React from 'react';
+import './Filter.css'
 
 const Filter = ({ label, options, value, onChange }) => (
   <select value={value} onChange={onChange}>
