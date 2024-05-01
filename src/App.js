@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './App.css'
 
 const App = () => {
   const [pets, setPets] = useState([]);
@@ -18,7 +19,7 @@ const App = () => {
   const filteredPets = pets.filter(pet =>
     pet.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-  
+
   const getAnimalCounts = petList => {
     const counts = {};
     petList.forEach(pet => {
@@ -28,7 +29,11 @@ const App = () => {
   };
 
   return (
-    <div>
+    
+    <div className="container">
+      <header>
+        <h1>PetFindr</h1>
+      </header>
       <input
         type="text"
         placeholder="Search by name..."
