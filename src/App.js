@@ -13,7 +13,7 @@ const App = () => {
   const [selectedColor, setSelectedColor] = useState('All Colors');
 
   useEffect(() => {
-    fetch('http://petfindr.local/wp-json/petfinder/v1/pets')
+    fetch('https://petfindr.azurewebsites.net/wp-json/petfinder/v1/pets')
       .then(response => response.json())
       .then(data => {
         setPets(data);
