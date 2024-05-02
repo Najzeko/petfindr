@@ -28,6 +28,7 @@
   padding-left: 20px;
 }
 
+/* media query to adjust for medium-sized screens */
 @media screen and (max-width: 1200px) {
   .pet-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -41,6 +42,7 @@
   }
 }
 
+/* media query to adjust for mobile-sized screens */
 @media screen and (max-width: 728px) {
   .pet-list {
     grid-template-columns: repeat(1, minmax(0, 1fr));

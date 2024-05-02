@@ -36,6 +36,7 @@ ul {
   padding: 5px 10px;
 }
 
+/* media query to adjust for mobile-sized screens */
 @media screen and (max-width: 728px) {
   header {
     font-size: 24px;

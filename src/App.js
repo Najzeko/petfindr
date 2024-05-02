@@ -12,6 +12,7 @@ const App = () => {
   const [selectedAnimal, setSelectedAnimal] = useState('All Animals');
   const [selectedColor, setSelectedColor] = useState('All Colors');
 
+  // query wordpress REST API for pet data
   useEffect(() => {
     fetch('https://petfindr.azurewebsites.net/wp-json/petfinder/v1/pets')
       .then(response => response.json())
@@ -20,19 +21,23 @@ const App = () => {
       });
   }, []);
 
+  // apply filters, both text and dropdowns
   const filteredPets = pets.filter(pet =>
     pet.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
     (selectedAnimal === 'All Animals' || pet.animal === selectedAnimal) &&
     (selectedColor === 'All Colors' || pet.color === selectedColor)
   );
   
+  // establish summary from filter results every time filters or search changes
   useEffect(() => {
     setAnimalCounts(getAnimalCounts(filteredPets));
   }, [filteredPets, searchTerm]);
 
+  // get filter options based on dataset
   const animalOptions = [...new Set(pets.map(pet => pet.animal))]
   const colorOptions = [...new Set(pets.map(pet => pet.color))]
 
+  // function to tally counts of each animal type
   const getAnimalCounts = petList => {
     const counts = {};
     petList.forEach(pet => {
@@ -61,7 +66,8 @@ const App = () => {
       </header>
       <div className="container">
         <div>
-          <TextInput value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
+          {/* search bar component */}
+          <TextInput value={searchTerm} onChange={e => setSearchTerm(e.target.value)} /> 
           <div className="filters">
             <Filter
               label="Animals"
@@ -76,11 +82,13 @@ const App = () => {
               onChange={handleColorChange}
             />
           </div>
+          {/* animal count summary */}
           <div className="animal-counts">
             {Object.entries(animalCounts).map(([animal, count]) => (
               <span key={animal}>{`${animal}: ${count} `}</span>
             ))}
           </div>
+          {/* pet directory grid */}
           <div className="pet-list">
             {filteredPets.length === 0 && (
               <div className="no-results">No results found!</div>

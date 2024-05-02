@@ -8,6 +8,7 @@ input[type="text"] {
   border-radius: 5px;
 }
 
+/* media query to adjust for mobile-sized screens */
 @media screen and (max-width: 768px) {
     input[type="text"] {
         width: 80%;
